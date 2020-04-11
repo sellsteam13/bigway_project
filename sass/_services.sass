@@ -1,0 +1,267 @@
+/** Page's >> services **/
+
+// heading
+.inside
+    padding: 60px 0 50px
+    background: $green
+    @media (max-width: 900px)
+        background-image: none !important
+        padding: 30px 0 25px
+    &.inside-services-dev
+        background: $green url('../images/backgrounds/services-dev_bg.svg') no-repeat center
+        background-position-x: right
+    &.inside-services-des
+        background: $green url('../images/backgrounds/services-des_bg.svg') no-repeat center
+        background-position-x: right
+    &.inside-services-apps
+        background: $green url('../images/backgrounds/services-apps_bg.svg') no-repeat center
+        background-position-x: right
+        background-position-y: bottom
+    &-wrap
+        max-width: 1400px
+        width: calc(100% - 120px)
+        margin: 0 auto
+        @media (max-width: 1350px)
+            width: calc(100% - 80px)
+        @media (max-width: 900px)
+            width: calc(100% - 40px)
+    &-back
+        margin-bottom: 100px
+        @media (max-width: 900px)
+            margin-bottom: 40px
+        a
+            font-weight: 600
+            font-size: .875rem
+            padding-left: 60px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                height: 8px
+                width: 40px
+                background: url('../images/default/back_icon.svg') no-repeat center
+                background-size: 100% 100%
+                will-change: transform
+                transition: transform $trans
+            &:hover
+                &::before
+                    transform: translateY(-50%) translateX(-4px)
+                    transition: $trans
+    &-title
+        margin-bottom: 20px
+        @media (max-width: 900px)
+            margin-bottom: 40px
+        h1
+            font-size: 4rem
+            line-height: 113%
+            color: #F8F8F8
+            font-family: $kamerik
+            font-weight: bold
+            @media (max-width: 900px)
+                font-size: 2.5rem
+            span
+                display: block
+    &-content
+        display: flex
+        align-items: flex-end
+        @media (max-width: 900px)
+            flex-direction: column
+            align-items: normal
+        &__btn
+            margin-left: 300px
+            @media (max-width: 900px)
+                display: none
+        &__options
+            margin-left: auto
+            text-align: right
+            list-style: none
+            @media (max-width: 900px)
+                text-align: left
+                margin-left: 0
+            &-item
+                font-size: 1.125rem
+                color: #F8F8F8
+                font-family: $kamerik
+                font-weight: bold
+                margin-bottom: 50px
+                letter-spacing: .06em
+                @media (max-width: 900px)
+                    font-size: .875rem
+                    margin-bottom: 20px
+                &:last-child
+                    margin-bottom: 0
+
+// advantages inside
+.advantages-inside
+    border-top: 1px solid $border
+    .advantages
+        &-wrap
+            padding: 120px 0 140px
+        &-list
+            &__item
+                &-title
+                    span
+                        color: $dark
+
+// portfolio section
+.portfolio
+    overflow: hidden
+    &-list
+        display: flex
+        width: 100%
+        @media (max-width: 1200px)
+            overflow-x: scroll
+        &__item
+            min-width: 58vw
+            max-width: 58vw
+            position: relative
+            &:first-child
+                margin-left: 60px
+                @media (max-width: 1350px)
+                    margin-left: 40px
+                @media (max-width: 900px)
+                    margin-left: 20px
+            &:hover
+                .portfolio-list__item-overlay
+                    opacity: 1
+                    pointer-events: all
+                    transition: opacity $trans
+            &-overlay
+                position: absolute
+                left: 0
+                right: 0
+                top: 0
+                bottom: 0
+                background-color: rgba(#000000, .3)
+                backdrop-filter: blur(5px)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                z-index: 1
+                opacity: 0
+                pointer-events: none
+                transition: opacity $trans
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 30px
+                    top: 30px
+                    width: 40px
+                    height: 40px
+                    border-top: 1px solid white
+                    border-left: 1px solid white
+                    @media (max-width: 430px)
+                        left: 10px
+                        top: 10px
+                &::before
+                    content: ''
+                    position: absolute
+                    right: 30px
+                    bottom: 30px
+                    width: 40px
+                    height: 40px
+                    border-bottom: 1px solid white
+                    border-right: 1px solid white
+                    @media (max-width: 430px)
+                        right: 10px
+                        bottom: 10px
+                span
+                    font-size: 2rem
+                    font-weight: 400
+                    color: white
+                    @media (max-width: 430px)
+                        font-size: 1.3rem
+                a
+                    margin-top: 15px
+                    color: white
+                    font-weight: 300
+                    &::after
+                        background-color: white
+            img
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                max-width: 39vw
+                max-height: 25vw
+            &::after
+                content: ''
+                display: block
+                padding-bottom: 75%
+                background-color: $dark
+            &:nth-child(1)
+                &::after
+                    background-color: #3C8CED
+            &:nth-child(2)
+                &::after
+                    background-color: #13DAAE
+            &:nth-child(3)
+                &::after
+                    background-color: #FFC763
+            &:nth-child(4)
+                &::after
+                    background-color: #FDAEB6
+            &:nth-child(5)
+                &::after
+                    background-color: #7EC667
+            &:nth-child(6)
+                &::after
+                    background-color: #398DCF
+
+.portfolio-list::-webkit-scrollbar
+    display: none
+
+// marquee block
+.marquee-block
+    &-wrap
+        max-width: 1440px
+        width: calc(100% - 120px)
+        margin: 0 auto
+        background-color: #2E2E2E
+        padding: 50px 0 60px
+        @media (max-width: 1350px)
+            width: calc(100% - 80px)
+        @media (max-width: 900px)
+            width: calc(100% - 40px)
+            padding: 25px 0 30px
+        @media (max-width: 560px)
+            padding: 15px 0
+    &__item
+        display: inline-block
+        margin-right: 60px
+        &:last-child
+            margin-right: 0
+        span
+            display: block
+            color: #f8f8f8
+            &:nth-child(1)
+                font-family: $kamerik
+                font-size: 1.125rem
+                font-weight: bold
+                letter-spacing: .06em
+                @media (max-width: 560px)
+                    font-size: .875rem
+            &:nth-child(2)
+                font-family: $kamerik
+                font-weight: bold
+                font-size: 4rem
+                margin-left: 25px
+                @media (max-width: 1350px)
+                    font-size: 3rem
+                @media (max-width: 900px)
+                    font-size: 2rem
+                @media (max-width: 560px)
+                    font-size: 1.25rem
+
+// feedback inside
+.feedback-inside
+    .feedback-wrap
+        padding-top: 250px
+        background-position-y: 100px
+        @media (max-width: 900px)
+            padding-top: 80px
+            background-position-y: 20px

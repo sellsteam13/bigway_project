@@ -1,0 +1,70 @@
+// vars
+@import './_vars-dark'
+
+/** Fonts **/
+@import './_fonts'
+
+/** Default settings **/
+@import './_default'
+
+/** Page's styles **/
+
+@import './_index'
+@import './_services'
+@import './_portfolio'
+@import './_about'
+@import './_contacts'
+
+.header
+    &-logo
+        &__link
+            background-image: url('../images/default/logo--white.svg')
+            @media (max-width: 900px)
+                background-image: url('../images/default/logo--mobile--dark.svg')
+
+.footer
+    &-main__logo
+        &-link
+            background-image: url('../images/default/logo--white.svg')
+
+.switch-light
+    background-image: url('../images/default/sun_icon.svg')
+
+.popup-close
+    filter: invert(100%)
+
+.popup-form__submit
+    color: white
+    &::after
+        background-color: white
+
+.inside-back a
+    color: #323232
+
+.marquee-block-wrap
+    border: 1px solid $border
+
+.works-heading-back, .contacts-info__back
+    a::before
+        filter: invert(100%)
+
+.about
+    border-bottom: 1px solid $border
+
+.about-back__link
+    color: white
+
+.home-wrap::before
+    background-color: #484848
+
+.feedback-wrap
+    background-image: url('../images/default/logo--large--dark.svg')
+
+.about
+    background-color: #2E2E2E
+
+body
+    &::-webkit-scrollbar
+        border-left: 1px solid $border
+    &::-webkit-scrollbar-track
+        background-color: rgba(#2e2e2e, .6)

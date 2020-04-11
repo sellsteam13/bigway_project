@@ -1,0 +1,559 @@
+/** Page's >> index **/
+// home section
+.home
+    border-bottom: 1px solid $border
+    @media (max-width: 1180px)
+        overflow: hidden
+    @media (max-width: 900px)
+        min-height: 100vh
+    &-wrap
+        position: relative
+        padding-bottom: 50px
+        @media (max-width: 900px)
+            min-height: 100vh
+            border-right: none
+            border-left: none
+        &::after
+            content: ''
+            position: absolute
+            left: 480px
+            top: 0
+            bottom: 0
+            background-color: $border
+            width: 1px
+            z-index: -1
+            @media (max-width: 1350px)
+                left: 240px
+            @media (max-width: 900px)
+                left: 90px
+        &::before
+            content: ''
+            position: absolute
+            top: 50px
+            right: 0
+            width: 25vw
+            height: 25vw
+            max-width: 360px
+            max-height: 360px
+            background-color: #ECECEC
+            border-radius: 50%
+            @media (max-width: 1180px)
+                display: none
+    &-title
+        padding: 190px 0 0
+        @media (max-width: 1350px)
+            padding: 150px 0 0
+        @media (max-width: 900px)
+            padding: 110px 0 0
+        span
+            display: block
+            &:nth-child(3), &:nth-child(4)
+                margin-left: 120px
+                @media (max-width: 900px)
+                    margin-left: 60px
+    &-btn
+        z-index: 0
+        position: relative
+        margin: 0 0 65px 490px
+        @media (max-width: 1350px)
+            margin: 20px 0 50px 250px
+        @media (max-width: 900px)
+            margin: 60px 0 0 10px
+    &-tel
+        display: flex
+        flex-direction: column
+        font-size: .8125rem
+        @media (max-width: 900px)
+            position: fixed
+            bottom: 40px
+            left: 20px
+            z-index: 9999
+            opacity: 0
+            transition: $trans
+            pointer-events: none
+        span
+            font-weight: 500
+            margin-bottom: 4px
+        a
+            font-weight: 500
+            &:hover
+                text-decoration: underline
+    &-rocket
+        max-width: 610px
+        max-height: 1237px
+        min-width: 350px
+        min-height: 700px
+        width: 42.4vw
+        height: 86vw
+        position: absolute
+        pointer-events: none
+        top: -22.5vw
+        right: -2vw
+        background: url('../images/default/header-rocket_photo.svg') no-repeat center
+        background-size: 100% 100%
+        will-change: transform
+        transition: transform .7s ease-in-out
+        @media (max-width: 1180px)
+            max-height: 655px
+            min-height: auto
+            top: 0px
+            right: 0
+            transform: translateX(60%)
+        @media (max-width: 900px)
+            max-height: 100%
+            width: 350px
+            height: 700px
+
+
+.home-btn:hover + .home-rocket
+    transform: translateY(-50px)
+    transition: .7s ease-in-out
+
+// principes section
+.principes
+    &-wrap
+        padding: 160px 0 110px
+        @media (max-width: 1350px)
+            padding: 110px 0 70px
+        @media (max-width: 1180px)
+            display: flex
+            flex-wrap: wrap
+        @media (max-width: 1180px)
+            padding: 70px 0 50px
+    &-title
+        margin-bottom: 150px
+        @media (max-width: 1350px)
+            margin-bottom: 110px
+        @media (max-width: 1180px)
+            width: 100%
+            margin-bottom: 60px
+    &-block
+        display: flex
+        margin-bottom: 75px
+        @media (max-width: 1350px)
+            margin-bottom: 50px
+        @media (max-width: 1180px)
+            flex-direction: column
+            width: 50%
+        @media (max-width: 768px)
+            width: 100%
+            margin-bottom: 30px
+        &:nth-child(2)
+            margin-bottom: 150px
+            @media (max-width: 1350px)
+                margin-bottom: 110px
+            @media (max-width: 1180px)
+                margin-bottom: 50px
+        &__title
+            font-size: 1.125rem
+            font-family: $kamerik
+            font-weight: bold
+            width: 640px
+            margin-right: 200px
+            @media (max-width: 1180px)
+                width: auto
+                margin-right: 0px
+                font-size: 1rem
+                margin-bottom: 20px
+            span
+                margin-left: 160px
+                @media (max-width: 1180px)
+                    margin-left: 10px
+        &__text
+            font-size: .875rem
+            font-weight: 500
+            line-height: 200%
+    &-photo
+        max-width: 100%
+        width: 460px
+        position: relative
+        margin: 0 0 90px 180px
+        @media (max-width: 1350px)
+            margin: 0 0 70px 180px
+            width: 320px
+        @media (max-width: 1180px)
+            display: none
+        &::after
+            content: ''
+            display: block
+            padding-bottom: 100%
+            background: url('../images/default/principes_photo.png') no-repeat center
+            background-size: 100% 100%
+    &-discuss
+        margin-left: 50%
+        @media (max-width: 1180px)
+            transform: translateX(-50%)
+
+
+// examples
+.examples
+    border-bottom: 1px solid $border
+    &-wrap
+        padding-bottom: 140px
+        @media (max-width: 1350px)
+            padding-bottom: 110px
+        @media (max-width: 1180px)
+            padding-bottom: 70px
+    &-list
+        padding: 110px 0 80px
+        display: flex
+        flex-wrap: wrap
+        @media (max-width: 1350px)
+            padding: 70px 0 50px
+        @media (max-width: 900px)
+            flex-wrap: nowrap
+            max-width: 100%
+            overflow-x: auto
+            padding: 40px 0 10px
+        &__item
+            margin: 0 10px 10px 0
+            width: calc(33.33% - 6.66px)
+            position: relative
+            &:hover
+                .examples-list__item-overlay
+                    opacity: 1
+                    pointer-events: all
+                    transition: opacity $trans
+            &-overlay
+                position: absolute
+                left: 0
+                right: 0
+                top: 0
+                bottom: 0
+                background-color: rgba(#000000, .3)
+                backdrop-filter: blur(5px)
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                z-index: 1
+                opacity: 0
+                pointer-events: none
+                transition: opacity $trans
+                &::after
+                    content: ''
+                    position: absolute
+                    left: 30px
+                    top: 30px
+                    width: 40px
+                    height: 40px
+                    border-top: 1px solid white
+                    border-left: 1px solid white
+                &::before
+                    content: ''
+                    position: absolute
+                    right: 30px
+                    bottom: 30px
+                    width: 40px
+                    height: 40px
+                    border-bottom: 1px solid white
+                    border-right: 1px solid white
+                span
+                    font-size: 1.125rem
+                    font-weight: 400
+                    color: white
+                a
+                    margin-top: 15px
+                    color: white
+                    font-weight: 400
+                    &::after
+                        background-color: white
+            &:nth-child(3n)
+                margin-right: 0
+            @media (max-width: 900px)
+                margin: 0
+                margin-right: 15px !important
+                min-width: 60%
+            @media (max-width: 430px)
+                min-width: 90%
+            &::after
+                content: ''
+                display: block
+                position: relative
+                padding-bottom: 83%
+                background-color: $dark
+            img
+                position: absolute
+                z-index: 1
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                @media (max-width: 1180px)
+                    max-width: 80%
+            &:nth-child(1)
+                &::after
+                    background-color: #3C8CED
+            &:nth-child(2)
+                &::after
+                    background-color: #13DAAE
+            &:nth-child(3)
+                &::after
+                    background-color: #FFC763
+            &:nth-child(4)
+                &::after
+                    background-color: #FDAEB6
+            &:nth-child(5)
+                &::after
+                    background-color: #88C973
+            &:nth-child(6)
+                &::after
+                    background-color: #398DCF
+    &-more
+        text-align: right
+        @media (max-width: 900px)
+            text-align: center
+            margin-top: 20px
+        .def-link
+            color: $green
+            &::after
+                background-color: $green
+
+.examples-list
+    &::-webkit-scrollbar
+        display: none
+
+// advantages
+.advantages
+    &-wrap
+        padding: 150px 0 200px
+        display: flex
+        position: relative
+        border-bottom: 1px solid $border
+        @media (max-width: 1350px)
+            padding: 110px 0 200px
+        @media (max-width: 1180px)
+            padding: 70px 0 120px
+            flex-wrap: wrap
+        @media (max-width: 768px)
+            padding: 50px 0
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 50%
+            width: 1px
+            background-color: $border
+            transform: translateX(-50%)
+            @media (max-width: 1350px)
+                left: 40%
+            @media (max-width: 1180px)
+                display: none
+    &-titling
+        width: 50%
+        @media (max-width: 1350px)
+            width: 40%
+        @media (max-width: 1180px)
+            width: 100%
+            margin-bottom: 40px
+        &__subtitle
+            margin-top: 40px
+            font-size: .875rem
+            font-weight: 500
+            line-height: 200%
+            @media (max-width: 1180px)
+                margin-top: 20px
+                br
+                    display: none
+    &-list
+        width: 50%
+        @media (max-width: 1350px)
+            width: 60%
+        @media (max-width: 1180px)
+            width: 100%
+        &__item
+            margin-bottom: 100px
+            padding-left: 180px
+            position: relative
+            @media (max-width: 1350px)
+                padding-left: 100px
+                margin-bottom: 70px
+            @media (max-width: 1180px)
+                padding-left: 70px
+            @media (max-width: 768px)
+                padding-left: 30px
+            &-title
+                font-size: 1.125rem
+                font-weight: bold
+                font-family: $kamerik
+                margin-bottom: 40px
+                @media (max-width: 1350px)
+                    font-size: 1rem
+                @media (max-width: 1180px)
+                    margin-bottom: 20px
+                span
+                    position: absolute
+                    color: $dark
+                    top: 0
+                    left: 0
+            &-text
+                font-size: .875rem
+                font-weight: 500
+                line-height: 200%
+                @media (max-width: 1350px)
+                    margin-right: 20px
+                    br
+                        display: none
+            &:last-child
+                margin-bottom: 0
+
+// services
+.services
+    overflow-x: hidden
+    &-wrap
+        display: flex
+        padding: 160px 0 270px
+        @media (max-width: 1350px)
+            padding: 110px 0 170px
+        @media (max-width: 1180px)
+            padding: 70px 0 120px
+            flex-wrap: wrap
+        @media (max-width: 660px)
+            padding: 50px 0
+    &-nav
+        width: 480px
+        @media (max-width: 1350px)
+            width: 320px
+            padding-right: 20px
+        @media (max-width: 1180px)
+            width: 100%
+            padding-right: 0
+        &-list
+            @media (max-width: 1180px)
+                display: flex
+                justify-content: center
+            @media (max-width: 660px)
+                display: none
+            &__item
+                font-size: 1.125rem
+                font-weight: 600
+                font-family: $kamerik
+                margin-bottom: 50px
+                cursor: pointer
+                @media (max-width: 1350px)
+                    font-size: 1rem
+                    margin-bottom: 35px
+                @media (max-width: 1180px)
+                    margin-bottom: 0
+                    margin-right: 15px
+                &:last-child
+                    margin-bottom: 0
+                    @media (max-width: 1180px)
+                        margin-right: 0
+    &-title
+        margin-bottom: 110px
+        @media (max-width: 1350px)
+            margin-bottom: 70px
+        @media (max-width: 1180px)
+            margin-bottom: 30px
+    &-slider
+        padding-top: 40px
+        width: calc(100% - 480px)
+        @media (max-width: 1350px)
+            width: calc(100% - 320px)
+        @media (max-width: 1180px)
+            width: 100%
+            margin-top: 150px
+        @media (max-width: 900px)
+            margin-top: 20px
+        @media (max-width: 660px)
+            padding-top: 0
+        &__item
+            max-width: 480px
+            margin: 0 auto
+            position: relative
+            display: none
+            transition: opacity $trans
+            opacity: 0
+            transition: opacity $trans
+            @media (max-width: 900px)
+                max-width: calc(100% - 50px)
+            @media (max-width: 660px)
+                display: block !important
+                opacity: 1
+            @media (max-width: 660px)
+                max-width: 100%
+                margin-bottom: 30px
+                padding: 0 20px 20px
+                border-bottom: 1px solid $border
+            &.current
+                opacity: 1
+                transition: $trans
+            &-lower
+                position: absolute
+                right: calc(100% + 60px)
+                bottom: 0
+                transform: translateY(50%)
+                width: 120px
+                height: 120px
+                background: $green
+                z-index: -1
+                overflow: hidden
+                transition: transform .6s ease-in-out
+                @media (max-width: 1350px)
+                    width: 90px
+                    height: 90px
+                @media (max-width: 900px)
+                    display: none
+                img
+                    transition: .6s ease-in-out
+            &-upper
+                position: absolute
+                top: -145px
+                right: -120px
+                width: 240px
+                height: 240px
+                background: $green
+                z-index: -1
+                overflow: hidden
+                transition: transform .6s ease-in-out
+                @media (max-width: 1350px)
+                    width: 190px
+                    height: 190px
+                @media (max-width: 900px)
+                    display: none
+                img
+                    transition: .6s ease-in-out
+            &-title
+                font-size: 4rem
+                margin-bottom: 30px
+                font-weight: bold
+                font-family: $kamerik
+                @media (max-width: 1350px)
+                    font-size: 3rem
+                @media (max-width: 660px)
+                    font-size: 2rem
+            &-text
+                font-size: .875rem
+                font-weight: 500
+                line-height: 200%
+                @media (max-width: 660px)
+                    br
+                        display: none
+            &-more
+                position: absolute
+                right: 0
+                top: calc(100% + 60px)
+                @media (max-width: 660px)
+                    position: static
+                    margin: 20px 0 0 30px
+                a
+                    color: $green
+                    &::after
+                        background-color: $green
+                    &:focus, &:active
+                        &::after
+                            background-color: $green
+            &:hover
+                .services-slider__item-lower
+                    transform: translateY(-100%)
+                    transition: .6s ease-in-out
+                    img
+                        transform: scale(1.2)
+                        transition: .6s ease-in-out
+                .services-slider__item-upper
+                    transform: translateY(40%)
+                    transition: .6s ease-in-out
+                    img
+                        transform: scale(1.6)
+                        transition: .6s ease-in-out

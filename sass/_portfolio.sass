@@ -1,0 +1,147 @@
+/** Page's >> works / portfolio **/
+// works heading
+.works-heading
+    &-wrap
+        padding: 55px 0 60px
+        @media (max-width: 900px)
+            padding: 25px 0 40px
+    &__title
+        text-align: center
+        font-size: 1.5rem
+        font-weight: 500
+        letter-spacing: .04em
+        margin-top: 75px
+        @media (max-width: 900px)
+            font-size: 1rem
+            margin-top: 30px
+    &-back
+        a
+            position: relative
+            display: inline-block
+            padding-left: 60px
+            font-size: .875rem
+            font-weight: 600
+            letter-spacing: .04em
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                width: 40px
+                height: 8px
+                background: url('../images/default/back_icon.svg') no-repeat center
+                background-size: 100% 100%
+                will-change: transform
+                transition: transform $trans
+            &:hover
+                &::before
+                    transform: translateY(-50%) translateX(5px)
+                    transition: $trans
+
+//works list
+.works-list
+    &-wrap
+        padding: 0 0 80px
+        border: 1px solid $border
+        @media (max-width: 900px)
+            padding-bottom: 20px
+    &-container
+        margin-bottom: 60px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        @media (max-width: 900px)
+            margin-bottom: 20px
+    &__item
+        width: calc(50% - 5px)
+        margin-bottom: 10px
+        position: relative
+        @media (max-width: 600px)
+            width: 100%
+        &:hover
+            .works-list__item-overlay
+                opacity: 1
+                pointer-events: all
+                transition: opacity $trans
+        &-overlay
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            background-color: rgba(#000000, .3)
+            backdrop-filter: blur(5px)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            z-index: 1
+            opacity: 0
+            pointer-events: none
+            transition: opacity $trans
+            &::after
+                content: ''
+                position: absolute
+                left: 30px
+                top: 30px
+                width: 30px
+                height: 30px
+                border-top: 1px solid white
+                border-left: 1px solid white
+            &::before
+                content: ''
+                position: absolute
+                right: 30px
+                bottom: 30px
+                width: 30px
+                height: 30px
+                border-bottom: 1px solid white
+                border-right: 1px solid white
+            span
+                font-size: 2rem
+                font-weight: 400
+                color: white
+            a
+                margin-top: 15px
+                color: white
+                font-weight: 600
+                &::after
+                    background-color: white
+        img
+            position: absolute
+            width: 67%
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+        &::after
+            content: ''
+            display: block
+            padding-bottom: 82.5%
+        &:nth-child(1)
+            &::after
+                background-color: #3C8CED
+        &:nth-child(2)
+            &::after
+                background-color: #13DAAE
+        &:nth-child(3)
+            &::after
+                background-color: #FFC763
+        &:nth-child(4)
+            &::after
+                background-color: #FDAEB6
+        &:nth-child(5)
+            &::after
+                background-color: #7EC667
+        &:nth-child(6)
+            &::after
+                background-color: #398DCF
+    &-more
+        text-align: center
+        a
+            color: $green
+            &::after
+                background-color: $green
+            &:focus, &:active
+                &::after
+                    background-color: darken($green, 7%)

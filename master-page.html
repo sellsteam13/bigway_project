@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- page settings -->
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок сайта</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./libs/normalize/normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles-dark.css" disabled id="darkModeStyleSheet">
+</head>
+<body>
+    <!-- !!preloader -->
+    <div class="preloader">
+        <img src="./images/default/pr-gif.gif" alt="">
+    </div>
+    <!-- //preloader -->
+    <!-- !!begin of page-->
+    <section class="wrapper" id="wrapper">
+        <!-- !!begin of header -->
+        <header class="header">
+            <div class="header-wrap">
+                <div class="header-mobile mobile-menu-tgl">
+                    <span></span><span></span>
+                </div>
+                <div class="header-logo">
+                    <a href="#" class="header-logo__link"></a>
+                </div>
+                <nav class="header-nav">
+                    <a href="#" class="header-nav__item">Разработка сайтов</a>
+                    <a href="#" class="header-nav__item">Разработка приложений</a>
+                    <a href="#" class="header-nav__item">Дизайн сайтов</a>
+                    <a href="#" class="header-nav__item submenu-tgl">Услуги</a>
+                    <a href="#" class="header-nav__item">Портфолио</a>
+                    <a href="#" class="header-nav__item">О нас</a>
+                    <a href="#" class="header-nav__item">Контакты</a>
+                </nav>
+                <div class="header-callback">
+                    <a href="#" class="header-callback__trigger call-fb">Заказать звонок</a>
+                </div>
+            </div>
+        </header>
+        <!-- !!end of header -->
+
+        <style>
+            .ui-wrap {
+                padding: 0px 0 100px;
+                border-bottom: 1px solid #E7E7E7;
+            }
+            .home-title {
+                padding-top: 50px;
+            }
+            .ui-btns {
+                padding: 70px 30px ;
+                display: flex;
+            }
+            .ui-btns a {
+                margin-right: 30px;
+            }
+            .ui-pages {
+                padding: 70px 30px;
+            }
+            .ui-pages .section-title {
+                margin-bottom: 50px;
+            }
+            .ui-pages li {
+                margin-bottom: 30px;
+                margin-left: 25px;
+            }
+            .ui-pages li:hover {
+                text-decoration: underline;
+            }
+            .ui-links {
+                padding: 70px 30px;
+            }
+            .ui-inputs {
+                max-width: 360px;
+                padding: 70px 30px;
+            }
+            .ui-form {
+                padding: 70px 30px;
+            }
+        </style>
+
+        <!-- !!begin of main -->
+        <main class="main">
+
+            <div class="ui">
+                <div class="ui-wrap limiter">
+                    <div class="home-title main-title">
+                        <h1>
+                            <span>Мастер</span>
+                            <span>страница</span>
+                        </h1>
+                    </div>
+                    <ul class="ui-pages">
+                        <div class="section-title" style="margin-left: -30px;">
+                            <h2>Список страниц</h2>
+                        </div>
+                        <li>
+                            <a href="index.html" target="_blank">Главная</a>
+                        </li>
+                        <li>
+                            <a href="services-dev.html" target="_blank">Услуги >> Разрабокта сайтов</a>
+                        </li>
+                        <li>
+                            <a href="services-des.html" target="_blank">Услуги >> Дизайн сайтов</a>
+                        </li>
+                        <li>
+                            <a href="services-apps.html" target="_blank">Услуги >> Разработка приложений</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html" target="_blank">Портфолио</a>
+                        </li>
+                        <li>
+                            <a href="about.html" target="_blank">О нас</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html" target="_blank">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="section-title">
+                        <h2>Кнопки</h2>
+                    </div>
+                    <div class="ui-btns">
+                        <a href="#" class="def-btn">
+                            <div class="def-btn-wrap">
+                                Обсудить <br> проект
+                            </div>
+                        </a>
+                        <a href="#" class="def-btn empty">
+                            <div class="def-btn-wrap">
+                                Обсудить <br> проект
+                            </div>
+                        </a>
+                        <a href="#" class="def-btn empty dark">
+                            <div class="def-btn-wrap">
+                                Обсудить <br> проект
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section-title">
+                        <h2>Ссылки</h2>
+                    </div>
+                    <div class="ui-links">
+                        <a href="#" class="def-link">Пример обычной ссылки</a>
+                    </div>
+                    <div class="section-title">
+                        <h2>Поля</h2>
+                    </div>
+                    <div class="ui-inputs">
+                        <input type="text" class="def-input" placeholder="Пример поля">
+                    </div>
+                    <div class="section-title">
+                        <h2>Форма</h2>
+                    </div>
+                    <div class="ui-form">
+                        <a href="#" class="def-link call-fb">Нажмите, чтобы посмотреть форму</a>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <!-- !!end of main -->
+
+        <!-- !!begin of footer -->
+        <footer class="footer">
+            <div class="footer-main">
+                <div class="footer-main-wrap limiter">
+                    <div class="footer-main__logo">
+                        <a href="#" class="footer-main__logo-link"></a>
+                    </div>
+                    <div class="footer-main-block">
+                        <div class="footer-main-block__title">Меню</div>
+                        <a href="#" class="footer-main-block__link">Портфолио</a>
+                        <a href="#" class="footer-main-block__link">О нас</a>
+                        <a href="#" class="footer-main-block__link">Контакты</a>
+                    </div>
+                    <div class="footer-main-block">
+                        <div class="footer-main-block__title">Услуги</div>
+                        <a href="#" class="footer-main-block__link">Дизайн сайтов</a>
+                        <a href="#" class="footer-main-block__link">Разработка сайтов</a>
+                        <a href="#" class="footer-main-block__link">Разработка приложений</a>
+                    </div>
+                    <div class="footer-main-block">
+                        <div class="footer-main-block__title">Контакты</div>
+                        <a href="#" class="footer-main-block__link">Улица Кирова, 23, Калуга, Россия</a>
+                        <a href="tel:+79208939797" class="footer-main-block__link">+7 920 893 97 97</a>
+                        <a href="mailto:bigwaystudio@info.com" class="footer-main-block__link">bigwaystudio@info.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <div class="footer-info-wrap limiter">
+                    <div class="footer-info__left">Copyright 2020 Big Way Studio. Все права защищены.</div>
+                    <div class="footer-info__right">
+                        <a href="#" class="footer-info__right-link">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- !!end of footer -->
+
+    </section>
+    <!-- !!end of page-->
+
+    <!-- modals -->
+    <div class="overlay">
+        <div class="popup popup-fb">
+            <div class="popup-title">
+                Обсудить проект
+            </div>
+            <form class="popup-form">
+                <input type="text" class="popup-form__input def-input" placeholder="Имя*">
+                <input type="text" class="popup-form__input def-input" placeholder="Телефон*">
+                <input type="text" class="popup-form__input def-input" placeholder="E-mail">
+                <div class="file-input popup-form__file">
+                    <input type="file" id="popup-file"><label for="popup-file">Прикрепить ТЗ</label>
+                </div>
+                <div class="popup-form__note">
+                    Заполнив форму я соглашаюсь с <a href="#">политикой конфиденциальности</a>
+                </div>
+                <button type="submit" class="popup-form__submit">
+                    Отправить
+                </button>
+            </form>
+            <div class="popup-close"></div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./js/base.js"></script>
+
+</body>
+</html>

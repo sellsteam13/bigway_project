@@ -1,0 +1,89 @@
+/** Page's >> contacts **/
+.contacts
+    border-bottom: 1px solid $border
+    &-wrap
+        display: flex
+        align-items: center
+        @media (max-width: 1350px)
+            flex-wrap: wrap
+    &-info
+        width: 50%
+        @media (max-width: 1350px)
+            width: 100%
+            padding-bottom: 40px
+        &__back
+            margin-bottom: 90px
+            @media (max-width: 1350px)
+                margin-bottom: 50px
+        &__back a
+            position: relative
+            display: inline-block
+            padding-left: 60px
+            font-size: .875rem
+            font-weight: 600
+            letter-spacing: .04em
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                width: 40px
+                height: 8px
+                background: url('../images/default/back_icon.svg') no-repeat center
+                background-size: 100% 100%
+                will-change: transform
+                transition: transform $trans
+            &:hover
+                &::before
+                    transform: translateY(-50%) translateX(5px)
+                    transition: $trans
+        &__title
+            margin-bottom: 100px
+            @media (max-width: 900px)
+                margin-bottom: 30px
+            h1
+                font-size: 4rem
+                font-weight: bold
+                font-family: $kamerik
+                line-height: 112.5%
+                @media (max-width: 1350px)
+                    font-size: 3rem
+                @media (max-width: 900px)
+                    font-size: 2rem
+                @media (max-width: 500px)
+                    font-size: 1.5rem
+        &__block
+            display: flex
+            flex-direction: column
+            > *
+                font-size: 1.125rem
+                line-height: 155%
+                margin-bottom: 22px
+                font-family: $kamerik
+                font-weight: bold
+                &:last-child
+                    margin-bottom: 70px
+                @media (max-width: 900px)
+                    font-size: 1rem
+                    margin-bottom: 10px
+            a
+                &:hover
+                    text-decoration: underline
+        &__btn
+            display: flex
+            justify-content: flex-end
+            a
+                margin-right: 180px
+                @media (max-width: 900px)
+                    margin-right: 0
+                    margin-left: 50%
+                    transform: translateX(-50%)
+    &-map
+        width: 50%
+        height: 700px
+        @media (max-width: 1350px)
+            width: 100%
+        img
+            width: 100%
+            height: 100%

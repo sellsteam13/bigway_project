@@ -1,0 +1,121 @@
+/** Page's >> about **/
+// about heading
+.about
+    padding: 60px 0 50px
+    background: $dark url('../images/backgrounds/about_bg.png') no-repeat center
+    @media (max-width: 900px)
+        padding: 30px 0 50px
+    &-wrap
+        border: none
+    &-back
+        margin-bottom: 190px
+        @media (max-width: 900px)
+            margin-bottom: 80px
+        &__link
+            position: relative
+            display: inline-block
+            padding-left: 60px
+            font-size: .875rem
+            font-weight: 600
+            letter-spacing: .04em
+            color: $white
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                width: 40px
+                height: 8px
+                background: url('../images/default/back_icon.svg') no-repeat center
+                filter: invert(100%)
+                background-size: 100% 100%
+                will-change: transform
+                transition: transform $trans
+            &:hover
+                &::before
+                    transform: translateY(-50%) translateX(5px)
+                    transition: $trans
+    &-content
+        position: relative
+        z-index: 1
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        &__btn
+            @media (max-width: 900px)
+                display: none
+        &__title
+            margin-bottom: 35px
+            h1
+                font-size: 4rem
+                font-family: $kamerik
+                color: #f8f8f8
+                line-height: 112.5%
+                @media (max-width: 900px)
+                    font-size: 3rem
+                @media (max-width: 560px)
+                    font-size: 2rem
+                span
+                    display: block
+
+// pricing section
+.pricing
+    &-wrap
+        padding: 110px 0 100px
+        border-bottom: 1px solid $border
+        @media (max-width: 900px)
+            padding: 50px 0
+        @media (max-width: 1350px)
+            padding: 70px 0
+    &-list
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+        @media (max-width: 900px)
+            justify-content: normal
+            overflow-x: auto
+        &__item
+            width: calc(33.33% - 6.66px)
+            @media (max-width: 900px)
+                min-width: 270px
+                margin: 0 10px
+            &:hover
+                img
+                    transform: translate(-50%, -50%) scale(1.2)
+                    transition: $trans
+                .pricing-list__item-title, .pricing-list__item-price
+                    transform: translateX(8px)
+                    transition: $trans
+            &-photo
+                width: 100%
+                position: relative
+                overflow: hidden
+                img
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+                    will-change: transform
+                    transition: transform $trans
+                &::after
+                    content: ''
+                    display: block
+                    padding-bottom: 100%
+                    background-color: $green
+            &-title
+                margin-top: 40px
+                font-size: 1.125rem
+                font-family: $kamerik
+                font-weight: bold
+                line-height: 155%
+                letter-spacing: .06em
+                margin-bottom: 2px
+                will-change: transform
+                transition: transform $trans
+            &-price
+                font-weight: 500
+                font-size: .875rem
+                line-height: 200%
+                will-change: transform
+                transition: transform $trans
